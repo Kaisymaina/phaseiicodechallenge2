@@ -1,33 +1,4 @@
-// import React, { useState, useEffect } from 'react';
 
-// const MyComponent = () => {
-//   const [data, setData] = useState([]);
-
-//   useEffect(() => {
-//     fetch('/db.json')
-//       .then(response => {
-//         if (!response.ok) {
-//           throw new Error('Failed to fetch data');
-//         }
-//         return response.json();
-//       })
-//       .then(jsonData => setData(jsonData))
-//       .catch(error => console.error('Error fetching data:', error));
-//   }, []);
-
-//   return (
-//     <div>
-//       <h1>Data from db.json:</h1>
-//       <ul>
-//         {data.map(item => (
-//           <li key={item.id}>{item.description}</li>
-//         ))}
-//       </ul>
-//     </div>
-//   );
-// };
-
-// export default MyComponent;
 
 
 
