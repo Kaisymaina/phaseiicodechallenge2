@@ -1,26 +1,30 @@
-// // App.jsx
-// import React from 'react';
-// import MyComponent from './components/MyComponent';
+import React, { useState } from 'react';
+import BotCollection from './components/BotCollection';
+import BotDetails from './components/BotDetail';
+import EnlistedBots from './components/EnlistedBots';
+import { Routes, Route } from 'react-router-dom';
 
-// const App = () => {
-//   return (
-//     <div>
-//       <h1>My React App</h1>
-//       <MyComponent />
-//     </div>
-//   );
-// };
-
-// export default App;
-import React from 'react';
-import MyComponent from './components/MyComponent';
 function App() {
-return(
-<div>
-     <MyComponent/>
-     </div>
-  );}
-  export default App;
+  const [enlistedBots, setEnlistedBots] = useState([]); 
+  return (
+    <div>
+      <EnlistedBots enlistedBots={enlistedBots} />
+      <Routes>
+        <Route
+          path="/"
+          element={<BotCollection setEnlistedBots={setEnlistedBots} />}
+        />
+        <Route
+          path="/details/:id"
+          element={<BotDetails setEnlistedBots={setEnlistedBots} enlistedBots={enlistedBots} />} 
+        />
+        
+      </Routes>
+    </div>
+  );
+}
+
+export default App;
 
 
 

@@ -12,7 +12,7 @@ function MyComponent() {
     fetch("http://localhost:3000/bots")
       .then((response) => response.json())
       .then((data) => {
-        setRobots(data); // Set robots to the array of objects returned by the API
+        setRobots(data); 
       })
       .catch((error) => {
         console.error('Error fetching data:', error);
